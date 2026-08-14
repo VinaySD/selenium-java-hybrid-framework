@@ -6,7 +6,7 @@
 .project
 .settings/
 
-# IntelliJ IDEA
+# IntelliJ IDEA 
 .idea/
 
 # Log files
@@ -24,3 +24,6 @@
 # Java crash logs
 hs_err_pid*
 replay_pid*
+
+.classpath
+.project
