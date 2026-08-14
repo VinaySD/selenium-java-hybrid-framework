@@ -1,144 +1,130 @@
-````markdown
 # 🚀 Selenium Java Hybrid Automation Framework
 
-<p align="center">
-  <strong>OpenCart UI Test Automation Framework</strong>
-</p>
-
-<p align="center">
-  A structured Selenium + Java automation framework using TestNG, Page Object Model,
-  Data-Driven Testing, Extent Reports, Log4j2, Cross-Browser Testing and Selenium Grid.
-</p>
-
-<p align="center">
-
-![Java](https://img.shields.io/badge/Java-17%2B-orange?style=for-the-badge&logo=openjdk)
-
-![Selenium](https://img.shields.io/badge/Selenium-WebDriver-43B02A?style=for-the-badge&logo=selenium&logoColor=white)
-
-![TestNG](https://img.shields.io/badge/TestNG-Testing-red?style=for-the-badge)
-
-![Maven](https://img.shields.io/badge/Maven-Build-C71A36?style=for-the-badge&logo=apachemaven)
-
-![POM](https://img.shields.io/badge/Design-Page%20Object%20Model-blue?style=for-the-badge)
-
-![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
-
-</p>
 
 ---
 
-## ✨ About The Project
+## 📌 About
 
-This project is a **Selenium Java Hybrid Automation Framework** created for automating the **OpenCart** web application.
+This project is a **Selenium Java Hybrid Automation Framework** built for testing the **OpenCart** application.
 
-The framework combines multiple automation practices into a single structured project, including:
+The framework combines Page Object Model, TestNG, data-driven testing, reusable utilities, reporting, logging, cross-browser execution, and Selenium Grid/Docker support.
 
-- Selenium WebDriver
-- Java
-- TestNG
-- Page Object Model (POM)
-- Data-Driven Testing
-- Apache POI
-- Extent Reports
-- Log4j2 Logging
-- Configuration Management
-- Cross-Browser Testing
-- Selenium Grid
-- Docker
-
-The main goal of this project is to understand how a maintainable Selenium automation framework can be structured instead of writing all automation code inside individual test classes.
+The goal of this project is to practice how a maintainable UI automation framework can be structured and used for real-world style testing.
 
 ---
 
-# 🧰 Tech Stack
+## 🛠️ Tech Stack
 
-| Technology | Purpose |
-|---|---|
-| ☕ Java | Programming Language |
-| 🕸️ Selenium WebDriver | Web UI Automation |
-| 🧪 TestNG | Test Execution & Test Management |
-| 📦 Maven | Dependency & Build Management |
-| 🏗️ POM | Page Object Model |
-| 📊 Apache POI | Excel Test Data |
-| 📈 Extent Reports | HTML Test Reports |
-| 📝 Log4j2 | Logging |
-| 🌐 ChromeDriver | Browser Automation |
-| 🐳 Docker | Containerized Execution |
-| 🖥️ Selenium Grid | Distributed / Cross-Browser Testing |
-
----
-
-# 🏗️ Framework Architecture
-
-```mermaid
-flowchart TD
-
-    A[TestNG Test Cases] --> B[Page Objects]
-
-    B --> C[Selenium WebDriver]
-
-    C --> D[OpenCart Application]
-
-    A --> E[Test Data]
-
-    E --> F[Apache POI / DataProvider]
-
-    A --> G[Utilities]
-
-    G --> H[Extent Reports]
-
-    G --> I[Log4j2]
-
-    A --> J[TestNG XML]
-
-    J --> K[Cross Browser Execution]
-
-    K --> L[Selenium Grid]
-
-    L --> M[Docker]
-````
+| Technology         | Purpose                               |
+| ------------------ | ------------------------------------- |
+| Java               | Programming language                  |
+| Selenium WebDriver | UI automation                         |
+| TestNG             | Test execution and test management    |
+| Maven              | Build and dependency management       |
+| Page Object Model  | Page-level design and maintainability |
+| Apache POI         | Excel test data handling              |
+| Extent Reports     | HTML test reporting                   |
+| Log4j2             | Execution logging                     |
+| Docker             | Container-based execution             |
+| Selenium Grid      | Remote / cross-browser execution      |
 
 ---
 
-# 🔄 Automation Flow
+## ✨ Framework Features
+
+* ✅ Page Object Model
+* ✅ Reusable Base Class
+* ✅ Data-Driven Testing
+* ✅ Excel-based Test Data
+* ✅ TestNG DataProvider
+* ✅ TestNG Groups
+* ✅ TestNG XML Suites
+* ✅ Test Dependencies
+* ✅ Assertions
+* ✅ Cross-Browser Testing
+* ✅ Extent Reports
+* ✅ Log4j2 Logging
+* ✅ Failure Screenshots
+* ✅ Selenium Grid
+* ✅ Docker Support
+* ✅ Maven Execution
+* ✅ External Configuration
+
+---
+
+## 🏗️ Framework Architecture
 
 ```text
-Requirement
-     ↓
-Test Scenario
-     ↓
-Test Case
-     ↓
-TestNG
-     ↓
-Page Object
-     ↓
-Selenium WebDriver
-     ↓
-OpenCart
-     ↓
-Validation
-     ↓
-Test Result
-     ↓
-┌───────────────┬───────────────┐
-↓               ↓               ↓
-Report        Screenshot       Log
+                    ┌───────────────────────┐
+                    │      TestNG Tests     │
+                    └───────────┬───────────┘
+                                │
+                                ▼
+                    ┌───────────────────────┐
+                    │    Page Objects       │
+                    └───────────┬───────────┘
+                                │
+                                ▼
+                    ┌───────────────────────┐
+                    │   Selenium WebDriver  │
+                    └───────────┬───────────┘
+                                │
+                                ▼
+                    ┌───────────────────────┐
+                    │       OpenCart        │
+                    └───────────────────────┘
+
+        ┌──────────────────────────────────────────────┐
+        │ Supporting Components                        │
+        │                                              │
+        │ DataProvider → ExcelUtility → Test Data      │
+        │ Extent Reports → Test Results                │
+        │ Log4j2 → Execution Logs                      │
+        │ Config → Environment Settings                │
+        │ Selenium Grid / Docker → Remote Execution    │
+        └──────────────────────────────────────────────┘
 ```
 
 ---
 
-# 📂 Project Structure
+## 🔄 Test Execution Flow
+
+```text
+TestNG Suite
+     ↓
+BaseClass
+     ↓
+Read Configuration
+     ↓
+Initialize Browser
+     ↓
+Launch OpenCart
+     ↓
+Execute Test Case
+     ↓
+Interact with Page Objects
+     ↓
+Validate Result
+     ↓
+Generate Report
+     ↓
+Capture Screenshot (if required)
+     ↓
+Write Logs
+     ↓
+Close Browser
+```
+
+---
+
+## 📂 Project Structure
 
 ```text
 selenium-java-hybrid-framework/
 │
 ├── src/
 │   └── test/
-│       │
 │       ├── java/
-│       │   │
 │       │   ├── pageObjects/
 │       │   │   ├── AccountRegistrationPage.java
 │       │   │   ├── BasePage.java
@@ -165,6 +151,7 @@ selenium-java-hybrid-framework/
 │
 ├── reports/
 ├── screenshots/
+├── logs/
 ├── target/
 ├── test-output/
 │
@@ -179,217 +166,162 @@ selenium-java-hybrid-framework/
 ├── pom.xml
 ├── run.bat
 ├── commands.txt
+├── .gitignore
 └── README.md
 ```
 
 ---
 
-# 🧩 Framework Components
-
-## 1️⃣ Page Object Model
-
-Page classes are maintained separately from test cases.
+## 🧪 Current Test Cases
 
 ```text
-pageObjects/
-│
-├── LoginPage.java
-├── HomePage.java
-├── MyAccountPage.java
-├── AccountRegistrationPage.java
-└── BasePage.java
+TC001
+Account Registration
+
+TC002
+Login Test
+
+TC003
+Data-Driven Login Test
 ```
 
-This keeps locators and page-related actions separate from the actual test logic.
+The framework structure is designed so more test cases can be added without changing the core framework components.
 
 ---
 
-## 2️⃣ Test Base
+## 📊 Data-Driven Testing
 
-`BaseClass.java` handles common test setup and configuration.
-
-It provides the common foundation required by the test cases.
-
----
-
-## 3️⃣ Test Cases
-
-The `testCases` package contains the actual automation tests.
-
-Current examples include:
+The login test uses external Excel data.
 
 ```text
-TC001_AccountRegistrationPage
-TC002_LoginTest
-TC003_LoginTestDDT
-```
-
----
-
-## 4️⃣ Data-Driven Testing
-
-The framework supports data-driven testing using:
-
-```text
+Excel File
+    ↓
+ExcelUtility
+    ↓
 TestNG DataProvider
-        +
-Apache POI
-        +
-Excel
+    ↓
+Login Test
+    ↓
+Validation
 ```
 
-Test data is stored in:
+Test data is maintained in:
 
 ```text
-testData/
-└── OpenCart_LoginData.xlsx
-```
-
-This allows the same test scenario to be executed with different sets of test data.
-
----
-
-## 5️⃣ TestNG
-
-TestNG is used for:
-
-* Test execution
-* Test annotations
-* Assertions
-* Test grouping
-* Data providers
-* Test suites
-* Cross-browser execution
-
-Available TestNG suite files include:
-
-```text
-master.xml
-grouping.xml
-crossbrowsertesting.xml
-grid-docker.xml
+testData/OpenCart_LoginData.xlsx
 ```
 
 ---
 
-## 6️⃣ Extent Reports
+## 🌐 Cross-Browser Testing
 
-Extent Reports are used to generate HTML execution reports.
-
-Generated reports are stored inside:
-
-```text
-reports/
-```
+Cross-browser execution is configured using TestNG XML files.
 
 Example:
-
-```text
-Test-Report-YYYY.MM.DD.HH.MM.SS.html
-```
-
----
-
-## 7️⃣ Logging
-
-Log4j2 is used to maintain execution logs.
-
-Configuration:
-
-```text
-src/test/resources/log4j2.xml
-```
-
-Logs:
-
-```text
-logs/
-└── automation.log
-```
-
-Logs help during debugging and failure investigation.
-
----
-
-## 8️⃣ Screenshots
-
-Screenshots are captured during test execution when required.
-
-They are stored inside:
-
-```text
-screenshots/
-```
-
-This makes it easier to investigate failed test cases.
-
----
-
-## 9️⃣ Configuration Management
-
-Application and execution settings are maintained inside:
-
-```text
-src/test/resources/config.properties
-```
-
-This avoids hardcoding configuration values throughout the framework.
-
-Example:
-
-```properties
-execution_env=local
-browser=chrome
-appURL=YOUR_APPLICATION_URL
-```
-
----
-
-# 🌐 Cross-Browser Testing
-
-The framework contains a separate TestNG configuration for cross-browser execution.
 
 ```text
 crossbrowsertesting.xml
 ```
 
-The framework can be configured to execute tests against different browsers.
+The framework can be configured to execute tests against supported browsers such as Chrome and Edge.
 
 ---
 
-# 🐳 Selenium Grid & Docker
+## 🐳 Selenium Grid / Docker
 
-The project also contains Selenium Grid and Docker configuration.
+The project also contains Docker and Selenium Grid configuration.
 
-Files:
+```text
+TestNG
+   ↓
+Selenium Grid
+   ↓
+Browser Node
+   ↓
+WebDriver
+   ↓
+OpenCart
+```
+
+Configuration files:
 
 ```text
 docker-compose.yaml
 grid-docker.xml
 ```
 
-This allows the framework to be extended toward distributed and parallel test execution.
+---
+
+## 📝 Configuration
+
+Environment and application settings are maintained separately.
+
+```text
+src/test/resources/config.properties
+```
+
+This allows configuration values to be changed without modifying test classes.
 
 ---
 
-# ▶️ How To Run
+## 📋 Logging
 
-## 1. Clone the Repository
+Log4j2 is used to record test execution details.
 
-```bash
-git clone <repository-url>
+```text
+src/test/resources/log4j2.xml
 ```
 
-## 2. Open The Project
+Generated logs can be found in:
 
-Open the project in:
+```text
+logs/
+```
 
-* Eclipse
-* IntelliJ IDEA
+---
 
-Import it as a **Maven Project**.
+## 📈 Reporting
 
-## 3. Configure The Application
+Extent Reports are generated after test execution.
+
+```text
+reports/
+```
+
+Reports can be used to review:
+
+```text
+✔ Passed tests
+✔ Failed tests
+✔ Test execution details
+✔ Failure information
+```
+
+---
+
+## 📸 Screenshots
+
+Screenshots are stored for debugging and failure analysis.
+
+```text
+screenshots/
+```
+
+---
+
+## ▶️ How to Run
+
+### 1. Clone the repository
+
+```bash
+git clone <your-repository-url>
+```
+
+### 2. Open the project
+
+Open the project in Eclipse or IntelliJ IDEA as a Maven project.
+
+### 3. Check configuration
 
 Open:
 
@@ -397,11 +329,9 @@ Open:
 src/test/resources/config.properties
 ```
 
-Update the required configuration values.
+Update the required values if necessary.
 
-## 4. Run TestNG
-
-Run one of the available TestNG suites.
+### 4. Run the TestNG suite
 
 For example:
 
@@ -409,9 +339,21 @@ For example:
 master.xml
 ```
 
-or use the appropriate suite based on the required execution.
+Other available suites include:
 
-## 5. Check Results
+```text
+grouping.xml
+crossbrowsertesting.xml
+grid-docker.xml
+```
+
+### 5. Run with Maven
+
+```bash
+mvn test
+```
+
+### 6. Review the results
 
 After execution, check:
 
@@ -424,161 +366,59 @@ test-output/
 
 ---
 
-# 📊 Test Execution
+## 🎯 Learning Objectives
 
-The framework produces multiple types of test artifacts:
-
-```text
-Test Execution
-      │
-      ├── 📊 Extent Report
-      │
-      ├── 📸 Screenshots
-      │
-      ├── 📝 Execution Logs
-      │
-      └── 🧪 TestNG Results
-```
-
----
-
-# 🎯 Test Scenarios Covered
-
-The current framework contains automation examples for:
-
-### 👤 Account
-
-* Account Registration
-
-### 🔐 Authentication
-
-* Login
-* Data-Driven Login Testing
-
-More scenarios can be added as the framework evolves.
-
----
-
-# 💡 Why Hybrid Framework?
-
-The framework combines multiple automation approaches instead of relying on a single technique.
-
-```text
-                 Hybrid Framework
-                        │
-        ┌───────────────┼───────────────┐
-        ↓               ↓               ↓
-       POM         Data Driven       TestNG
-        │               │               │
-        ↓               ↓               ↓
-   Page Objects       Excel         Test Suites
-        │               │               │
-        └───────────────┼───────────────┘
-                        ↓
-                 Selenium WebDriver
-                        ↓
-                  OpenCart Testing
-```
-
----
-
-# 📌 Project Status
-
-<p align="center">
-
-### ✅ Selenium + TestNG Hybrid Framework Completed
-
-</p>
-
-The current version demonstrates a structured Selenium automation framework with:
-
-```text
-✅ Selenium WebDriver
-✅ Java
-✅ TestNG
-✅ Page Object Model
-✅ Data-Driven Testing
-✅ Apache POI
-✅ Extent Reports
-✅ Log4j2
-✅ Screenshots
-✅ Configuration Management
-✅ Cross-Browser Testing
-✅ Selenium Grid
-✅ Docker
-```
-
----
-
-# 🚀 Future Improvements
-
-The framework can be extended with:
-
-```text
-REST Assured
-     ↓
-API Automation
-     ↓
-SQL / Database Validation
-     ↓
-CI/CD
-     ↓
-GitHub Actions
-     ↓
-Complete SDET Automation Pipeline
-```
-
-Other possible improvements:
-
-* More end-to-end scenarios
-* API automation
-* Database validation
-* Parallel execution improvements
-* CI/CD integration
-* Better test-data management
-* Environment-specific configuration
-
----
-
-# 📚 Learning Journey
-
-This framework is part of my automation testing learning journey:
+This project helped me practice:
 
 ```text
 Java
-  ↓
+   ↓
 Selenium WebDriver
-  ↓
+   ↓
 TestNG
-  ↓
+   ↓
 Page Object Model
-  ↓
+   ↓
 Data-Driven Testing
-  ↓
-Hybrid Automation Framework
-  ↓
-API Testing
-  ↓
-REST Assured
-  ↓
-SQL
-  ↓
-CI/CD
+   ↓
+Reporting & Logging
+   ↓
+Cross-Browser Testing
+   ↓
+Selenium Grid / Docker
 ```
 
 ---
 
-# 👨‍💻 Author
+## 🚧 Future Improvements
 
-**Vinay Chaudhari**
-
-Computer Engineering | QA Automation / SDET
+```text
+→ API Automation using REST Assured
+→ Database Validation
+→ CI/CD Integration
+→ More End-to-End Test Scenarios
+→ Improved Parallel Execution
+→ Environment-specific execution
+```
 
 ---
 
-<p align="center">
+## ✅ Status
 
-⭐ If you find this project useful, feel free to explore the repository.
+**Completed**
 
-</p>
-```
+This project represents my completed Selenium + TestNG Hybrid Automation Framework practice.
+
+---
+
+## 👨‍💻 Author
+
+**Vinay S. Chaudhari**
+
+Java | Selenium | TestNG | QA Automation
+
+<div align="center">
+
+⭐ **Thanks for visiting the repository!**
+
+</div>
