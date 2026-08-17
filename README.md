@@ -1,64 +1,63 @@
 # 🚀 Selenium Java Hybrid Automation Framework
 
-## 📌 About
+A **Selenium + Java hybrid automation framework** built for testing the **OpenCart** application.
 
-A Selenium Java Hybrid Automation Framework built for testing the **OpenCart** application.
-
-The framework combines Selenium, TestNG, Page Object Model, Data-Driven Testing, reporting, logging, and cross-browser execution.
+The framework combines **Selenium WebDriver, TestNG, Page Object Model, Excel-based data-driven testing, reporting, logging, and cross-browser execution**.
 
 ## 🛠️ Tech Stack
 
-* Java
-* Selenium WebDriver
-* TestNG
-* Maven
-* Page Object Model (POM)
-* Apache POI
-* Extent Reports
-* Log4j2
-* Docker / Selenium Grid
+- Java
+- Selenium WebDriver
+- TestNG
+- Maven
+- Page Object Model (POM)
+- Apache POI
+- Extent Reports
+- Log4j2
+- Docker / Selenium Grid
 
 ## ✨ Key Features
 
-* Page Object Model
-* Data-Driven Testing with Excel
-* TestNG DataProvider
-* TestNG Groups & Suites
-* Test Dependencies
-* Cross-Browser Testing
-* Extent Reports
-* Log4j2 Logging
-* Failure Screenshots
-* Selenium Grid / Docker
+- Page Object Model for maintainable test code
+- Data-driven testing with Excel and TestNG DataProvider
+- TestNG groups, suites, and dependencies
+- Cross-browser testing
+- Extent HTML reports
+- Log4j2 logging
+- Failure screenshots
+- Selenium Grid / Docker support
+- External configuration using `config.properties`
 
-## 📂 Structure
+## 📂 Project Structure
 
 ```text
 src/test/java/
-├── pageObjects/
-├── testBase/
-├── testCases/
-└── utilities/
+├── pageObjects/                 # Page classes and locators
+├── testBase/                    # Driver setup and common test utilities
+├── testCases/                   # TestNG test cases
+└── utilities/                   # Excel, DataProvider, and reporting utilities
 
 src/test/resources/
-├── config.properties
-└── log4j2.xml
+├── config.properties            # Test configuration
+└── log4j2.xml                   # Logging configuration
 
-testData/
-reports/
-screenshots/
-logs/
+testData/                        # Excel test data
+reports/                         # Generated Extent reports
+screenshots/                     # Failure screenshots
+logs/                            # Automation logs
 
-master.xml
-grouping.xml
-crossbrowsertesting.xml
-grid-docker.xml
-docker-compose.yaml
-pom.xml
-run.bat
+testng.xml files:
+├── master.xml
+├── grouping.xml
+├── crossbrowsertesting.xml
+└── grid-docker.xml
+
+docker-compose.yaml              # Selenium Grid / Docker setup
+pom.xml                           # Maven dependencies and build configuration
+run.bat                           # Windows run script
 ```
 
-## 🧪 Current Tests
+## 🧪 Current Test Cases
 
 ```text
 TC001 - Account Registration
@@ -68,18 +67,32 @@ TC003 - Data-Driven Login Test
 
 ## ▶️ How to Run
 
-1. Clone the repository.
-2. Open it as a Maven project.
-3. Update `config.properties` if required.
-4. Run `master.xml` or the required TestNG suite.
-5. Check reports, logs, screenshots, and TestNG results.
+### Local Execution
 
-## 📊 Test Flow
+1. Clone the repository.
+2. Open the project as a Maven project.
+3. Check `src/test/resources/config.properties`.
+4. Set the required browser and execution configuration.
+5. Run `master.xml` or another required TestNG suite.
+6. Check the generated reports, logs, screenshots, and TestNG results.
+
+### Cross-Browser / Grid Execution
+
+1. Make sure the required Selenium Grid / Docker setup is running.
+2. Use the appropriate TestNG suite, such as `crossbrowsertesting.xml` or `grid-docker.xml`.
+3. Run the suite.
+4. Check the generated reports and execution results.
+
+> **Security:** Do not commit real passwords, tokens, or other secrets in `config.properties`. Use placeholder values before pushing the repository to GitHub.
+
+## 📊 Test Execution Flow
 
 ```text
 TestNG
    ↓
 BaseClass
+   ↓
+Test Cases
    ↓
 Page Objects
    ↓
@@ -90,12 +103,26 @@ OpenCart
 Reports + Logs + Screenshots
 ```
 
+## 📊 Reporting & Logs
+
+After execution, generated files can be found in:
+
+```text
+reports/
+screenshots/
+logs/
+test-output/
+```
+
+## 🎯 Purpose
+
+This project was built to practice and demonstrate how Selenium, TestNG, POM, data-driven testing, reporting, logging, and browser execution can be combined into a maintainable automation framework.
+
 ## ✅ Status
 
 **Completed**
 
 ## 👨‍💻 Author
 
-**Vinay S. Chaudhari**
-
+**Vinay S. Chaudhari**  
 Java | Selenium | TestNG | QA Automation
