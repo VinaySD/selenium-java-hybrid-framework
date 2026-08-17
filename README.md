@@ -83,8 +83,6 @@ TC003 - Data-Driven Login Test
 3. Run the suite.
 4. Check the generated reports and execution results.
 
-> **Security:** Do not commit real passwords, tokens, or other secrets in `config.properties`. Use placeholder values before pushing the repository to GitHub.
-
 ## 📊 Test Execution Flow
 
 ```text
