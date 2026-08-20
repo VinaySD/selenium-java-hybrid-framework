@@ -13,10 +13,8 @@
 		<parameter name="browser" value="chrome"></parameter>
 
 		<classes>
-			<class name="testCases.TC001_AccountRegistrationPage" />
-			<class name="testCases.TC002_LoginTest" />
-			<!-- <class name="testCases.TC003_LoginDDT" />-->
-
+			<class name="testCases.TC005_AddToCartTest" />
+			
 		</classes>
 
 	</test>
