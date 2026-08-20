@@ -27,3 +27,9 @@ replay_pid*
 
 .metadata
 
+target/
+test-output/
+reports/
+logs/
+*.class
+/target/
