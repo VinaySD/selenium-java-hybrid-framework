@@ -63,6 +63,8 @@ run.bat                           # Windows run script
 TC001 - Account Registration
 TC002 - Login Test
 TC003 - Data-Driven Login Test
+TC004 - Search Test
+TC005 - Add to Cart Test
 ```
 
 ## ▶️ How to Run
