@@ -19,6 +19,15 @@ public class HomePage extends BasePage{
     @FindBy(xpath="//ul[@class='dropdown-menu dropdown-menu-right']//a[normalize-space()='Login']")
     WebElement lnklogin;
     
+    @FindBy(xpath="//input[@placeholder='Search']") 
+    WebElement Search;
+    
+    @FindBy(xpath="//button[@class='btn btn-default btn-lg']") 
+    WebElement btnSearch;
+    
+    @FindBy(xpath="//span[normalize-space()='Shopping Cart']")
+    WebElement btnShoppingCart;
+    
     public void clickMyAccount(){
         lnkMyaccount.click();
     }
@@ -31,5 +40,18 @@ public class HomePage extends BasePage{
     	lnklogin.click();
     }
     
+    public void clickSearch(String product) {
+    	Search.clear();
+    	Search.sendKeys(product);
+ 
+    }
+    
+    public void clickShoppingCart() {
+    	btnShoppingCart.click();
+    }
+    
+    public void clickSearchBtn() {
+    	btnSearch.click();
+    }
    
 }

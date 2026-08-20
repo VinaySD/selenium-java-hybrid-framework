@@ -28,4 +28,54 @@ public class DataProviders {
         }
         return logindata; //returning two dimension array
     }
+    
+    //DataProvider 2
+    @DataProvider(name="SearchProductData")
+    public String[][] getData2() throws IOException 
+    {
+    	
+    	String path = ".\\testData\\OpenCart_SearchProductData.xlsx";
+    	
+    	ExcelUtility xlutil=new ExcelUtility(path);
+    	
+    	int totalrows=xlutil.getRowCount("Sheet1");
+    	int totalcols=xlutil.getCellCount("Sheet1",1);
+    	
+    	String searchproddata[][]= new String[totalrows][totalcols];
+    	
+    	for(int i=1; i<=totalrows; i++) {
+    		
+    		searchproddata[i-1][0]= xlutil.getCellData("Sheet1",i, 0);
+       	}
+    	
+    	return searchproddata;
+    	
+    }
+    
+   
+    
+    /*
+    //DataProvider 3
+    @DataProvider(name="SearchLoginData")
+    public String[][] getData3() throws IOException 
+    {
+    	
+    	String path = ".\\testData\\OpenCart_SearchLoginData.xlsx";
+    	
+    	ExcelUtility xlutil=new ExcelUtility(path);
+    	
+    	int totalrows=xlutil.getRowCount("Sheet1");
+    	int totalcols=xlutil.getCellCount("Sheet1",1);
+    	
+    	String searchlogindata[][]= new String[totalrows][totalcols];
+    	
+    	for(int i=1; i<=totalrows; i++) {
+    		for(int j=0; j<totalcols; j++) {
+    			searchlogindata[i-1][j]= xlutil.getCellData("Sheet1",i, j);
+    		}
+       	}
+    	
+    	return searchlogindata;
+*/
 }
+   
